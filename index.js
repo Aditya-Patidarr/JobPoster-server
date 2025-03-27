@@ -10,8 +10,11 @@ const url = process.env.DB_URL;
 connectToMongo(url);
 app.use(express.json());
 app.use(cors());
-app.use('/', jobRoutes);
+app.get('/',(req,res)=>{
+    res.send("Home Page!!");
+})
+app.use('/jobs', jobRoutes);
 
 app.listen(PORT,(req,res)=>{
-    console.log("Listening on Port 5000!!");
+    console.log("Listening on Port!!");
 })

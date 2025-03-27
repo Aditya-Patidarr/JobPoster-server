@@ -1,5 +1,5 @@
 import Job from "../models/Job.js";
-import User from "../models/user.js";
+import User from "../models/User.js";
 export const getJobs = async (req,res)=>{
     try {
         const jobs = await Job.find();
